@@ -1,21 +1,18 @@
-# Simple Node API Backend
+# Background and Overview 
+Stocktok is a data visualization that displays information about popular ETF stocks. Users are able to switch between different chart types to display the data and utilize common technical indicators to assist in seeing trend patterns.
 
-Simple Node Backend for avoiding CORS issues in development
-- npm install
-- npm run build
-- npm start
+# Project Link
+Here is a link to the live project:
 
-Technologies
-- express
-- axios
-- webpack
+# Functionality and MVP
+Users are able to:
+* Switch between different chart types
+* Apply different technical indicators on the chart
+* Be able to see detailed information by hovering over candles
 
-Implementation
+# Architecture and Technologies
+The project utilizes the following technologies:
+* `Javascript` for updating the visuals based on the selected charts
+* `D3` for data visualization
+* `Webpack` for bundling JS files
 
-This project allows you to serve your HTML and JS from a custom backend that performs API requests to an external API.
-
-app.js contains the routes that you need to get your data. Customize them according to the paths you wish to use in your code, and the API you wish to access
-
-Write your JS in the javascripts folder; your entry file is index.js.
-
-In the entry file 
