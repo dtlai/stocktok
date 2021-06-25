@@ -63,9 +63,10 @@ class HistoricalPriceChart {
       loadFile = 'sample-data-vti.json';
     } else if (selectedDataset === 'vea') {
       loadFile = 'sample-data-vea.json';
-    } else if (selectedDataset === 'aapl') {
-      loadFile = 'sample-data-aapl.json'
-    }
+    } 
+    // else if (selectedDataset === 'aapl') {
+    //   loadFile = 'sample-data-aapl.json'
+    // }
 
     return d3.json(loadFile).then(data => {
       const chartResultsData = data['chart']['result'][0];

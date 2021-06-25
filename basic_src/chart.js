@@ -5,17 +5,7 @@ const svg = d3.select('svg');
 const width = +svg.attr('width');
 const height = +svg.attr('height');
 
-// using D3's csv function with promise syntax
 
-// d3.csv('https://gist.githubusercontent.com/dtlai/e6e5d2eb28bfd3a59b7af5ba5d534190/raw/7783272c55759f05e7bee19bb014144a607f84ae/monthly_IBM.csv')
-d3.csv('./monthly_IBM.csv')
-    .then(data => {
-        data.forEach(d => {
-            d.close = +d.close,
-            d.date = new Date(d.date)
-        })
-        render(data)
-    })
 
 // render function that takes in data
 // info includes title, axis labels, chart dimension
@@ -88,14 +78,6 @@ const render = data => {
         .attr('class', 'line-path')
         .attr('d', lineGenerator(data));
 
-    g.selectAll("circle")
-      .data(data)
-      .enter()
-      .append("circle")
-      .attr("cy", (d) => yScale(yValue(d)))
-      .attr("cx", (d) => xScale(xValue(d)))
-      .attr("r", circleRadius);
-
     const div = d3
       .select("body")
       .append("div")
@@ -117,9 +99,10 @@ const render = data => {
             "<br/><br/> Open: $" +
             d.open +
             "<br/><br/> Close: $" +
-            d.close //+
-            // "<br/><br/> Volume(USD): $" +
-            // d.volume
+            d.close 
+            +
+            "<br/><br/> Volume(USD): $" +
+            d.volume
         )
         .style("left", d3.event.pageX + "px")
         .style("top", d3.event.pageY - 28 + "px");
@@ -131,3 +114,15 @@ const render = data => {
     
     
 }
+
+// using D3's csv function with promise syntax
+
+// d3.csv('https://gist.githubusercontent.com/dtlai/e6e5d2eb28bfd3a59b7af5ba5d534190/raw/7783272c55759f05e7bee19bb014144a607f84ae/monthly_IBM.csv')
+d3.csv('./monthly_IBM.csv')
+    .then(data => {
+        data.forEach(d => {
+            d.close = +d.close,
+            d.date = new Date(d.date)
+        })
+        render(data)
+    })

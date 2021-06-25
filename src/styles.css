@@ -1,11 +1,11 @@
 body {
-  background: #00151c;
+  background: #44036d;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 #chart {
-  background: #0e3040;
-  color: #67809f;
+  background: #57224c;
+  color: #b77ec2;
   width: 100%;
   height: 100%;
 }
@@ -87,4 +87,8 @@ a {
     justify-content: flex-start;
     align-items: center;
   }
+}
+
+#chart {
+  max-width: 1400px;
 }
