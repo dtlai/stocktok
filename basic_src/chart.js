@@ -12,7 +12,7 @@ d3.csv('./monthly_IBM.csv')
     .then(data => {
         data.forEach(d => {
             d.close = +d.close,
-            d.time = new Date(d.date)
+            d.date = new Date(d.date)
         })
         render(data)
     })
@@ -20,6 +20,7 @@ d3.csv('./monthly_IBM.csv')
 // render function that takes in data
 // info includes title, axis labels, chart dimension
 // xValue, yValue helper methods to represent coords
+
 
 const render = data => {
     const title = 'IBM Price History';
@@ -80,10 +81,53 @@ const render = data => {
         .attr('y', -10)
         .text(title);
 
-    // const lineGenerator = d3.line()
-    //     .x(d => xScale(xValue(d)))
-    //     .y(d => yScale(yValue(d)))
-    // g.append('path')
-    //     .attr('class', 'line-path')
-    //     .attr('d', lineGenerator(data));
+    const lineGenerator = d3.line()
+        .x(d => xScale(xValue(d)))
+        .y(d => yScale(yValue(d)))
+    g.append('path')
+        .attr('class', 'line-path')
+        .attr('d', lineGenerator(data));
+
+    g.selectAll("circle")
+      .data(data)
+      .enter()
+      .append("circle")
+      .attr("cy", (d) => yScale(yValue(d)))
+      .attr("cx", (d) => xScale(xValue(d)))
+      .attr("r", circleRadius);
+
+    const div = d3
+      .select("body")
+      .append("div")
+      .attr("class", "tooltip")
+      .style("opacity", 0);
+
+    g.selectAll("circle")
+    .data(data)
+    .enter()
+    .append("circle")
+    .attr("cy", (d) => yScale(yValue(d)))
+    .attr("cx", (d) => xScale(xValue(d)))
+    .attr("r", circleRadius)
+    .on("mouseover", (d) => {
+        div.transition().duration(200).style("opacity", 0.9);
+        div
+        .html(
+            d.date.toLocaleString("en-US") +
+            "<br/><br/> Open: $" +
+            d.open +
+            "<br/><br/> Close: $" +
+            d.close //+
+            // "<br/><br/> Volume(USD): $" +
+            // d.volume
+        )
+        .style("left", d3.event.pageX + "px")
+        .style("top", d3.event.pageY - 28 + "px");
+    })
+    .on("mouseout", function (d) {
+        div.transition().duration(500).style("opacity", 0);
+    });
+
+    
+    
 }
