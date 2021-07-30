@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+
 body {
   background: #44036d;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 #chart {
   background: #57224c;
   color: #b77ec2;
-  width: 100%;
+  max-width: 1400px;
   height: 100%;
 }
 
@@ -17,7 +19,7 @@ body {
   height: 38px;
   padding: 2px;
   border-radius: 5px;
-  font: 12px sans-serif;
+  font-size: 12px;
   background: lightsteelblue;
   pointer-events: auto;
 }
@@ -81,14 +83,10 @@ a {
   fill: #c0392b;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 700px) {
   .flex-container {
     -webkit-flex-flow: column-reverse nowrap;
     justify-content: flex-start;
     align-items: center;
   }
-}
-
-#chart {
-  max-width: 1400px;
 }
