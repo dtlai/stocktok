@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
 
 body {
-  background: #44036d;
+  background: #035d6d;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -10,6 +10,7 @@ body {
   color: #b77ec2;
   max-width: 1400px;
   height: 100%;
+  margin-left: 60px;
 }
 
 .tooltip {
@@ -89,4 +90,8 @@ a {
     justify-content: flex-start;
     align-items: center;
   }
+}
+
+svg {
+  margin-right: 200px;
 }

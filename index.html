@@ -1,8 +1,10 @@
+
 <!DOCTYPE html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="./styles.css" type="text/css" media="screen" charset="utf-8">
-<script src="https://d3js.org/d3.v5.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./styles.css" type="text/css" media="screen" charset="utf-8">
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://kit.fontawesome.com/af9d8c1043.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="flex-container">
@@ -38,6 +40,43 @@
     </div>
     <div class="flex-item">
       <p>Price Charts of Vanguard ETFs (VIG, VTI, and VEA) for the year of 2018, built with D3.js. Prices are displayed in United States Dollars(USD). 
+    </div>
+    <div className="about-links">
+      <a
+        href="https://www.linkedin.com/in/davidlai9/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <i class="fab fa-linkedin" className="about-icon"
+          size={40}
+          color="white"></i>
+      <p>LinkedIn</p>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/davidlai9/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <i class="fab fa-github"
+          className="about-icon"
+          size={40}
+          color="white"
+        ></i>
+      <p>GitHub</p>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/davidlai9/"
+        target="_blank"
+        rel="noreferrer"
+      >
+
+        <i class="fab fa-angellist" 
+          className="about-icon"
+          size={40}
+          color="white"
+        ></i>
+        <p>AngelList</p>
+      </a>
     </div>
   </div>
   <div id="chart"></div>
