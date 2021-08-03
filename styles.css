@@ -1,18 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
 
-body {
-  background: #035d6d;
-  font-family: 'Open Sans', sans-serif;
-}
-
-#chart {
-  background: #57224c;
-  color: #b77ec2;
-  max-width: 1400px;
-  height: 100%;
-  margin-left: 60px;
-}
-
 .tooltip {
   position: absolute;
   text-align: center;
@@ -21,7 +8,7 @@ body {
   padding: 2px;
   border-radius: 5px;
   font-size: 12px;
-  background: lightsteelblue;
+  background: rgb(33, 45, 61);
   pointer-events: auto;
 }
 
@@ -31,41 +18,12 @@ body {
   font-size: 10px;
   width: 100%;
   line-height: 0;
-  color: lightsteelblue;
+  color: rgb(33, 45, 61);
   content: "\25BC";
   position: absolute;
   text-align: center;
   top: 100%;
   left: 0;
-}
-
-.flex-container {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-
-  -webkit-flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.flex-item {
-  color: white;
-  text-align: left;
-  padding: 1em;
-
-  font-size: 0.9em;
-  letter-spacing: 0.01em;
-}
-
-a {
-  color: #67809f;
 }
 
 .bars.up-day path {
@@ -85,13 +43,102 @@ a {
 }
 
 @media screen and (max-width: 700px) {
-  .flex-container {
+  .info-container {
     -webkit-flex-flow: column-reverse nowrap;
     justify-content: flex-start;
     align-items: center;
   }
 }
 
+
+a {
+  color: white;
+  font-size: 20px;
+}
+
+.about-icon {
+  font-size: 40px;
+}
+
+body {
+  background: #414040;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#chart {
+  background: #57224c;
+  color: #b77ec2;
+  max-width: 1300px;
+  height: 700px;
+  margin-left: 60px;
+}
+
+.info-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+  font-size: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+
+.description {
+  color: white;
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.description > p {
+  margin-top: 10px;
+}
+
+.about-links {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-links > a {
+  display: flex;
+  margin-left: 50px;
+  margin-right: 50px;
+  text-decoration: none;
+}
+
+#about-icon {
+  display: flex;
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.about-links > a > p {
+  margin-top: 0px;
+}
+
+.info-item {
+  color: white;
+  font-size: 20px;
+  display: flex;
+}
+
+#select-stock {
+  font-size: 20px;
+}
+
+.item > input{
+  height: 20px;
+  width: 20px;
+}
+
 svg {
-  margin-right: 200px;
+  margin-left: 200px;
 }

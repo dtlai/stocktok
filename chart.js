@@ -64,9 +64,6 @@ class HistoricalPriceChart {
     } else if (selectedDataset === 'vea') {
       loadFile = 'sample-data-vea.json';
     } 
-    // else if (selectedDataset === 'aapl') {
-    //   loadFile = 'sample-data-aapl.json'
-    // }
 
     return d3.json(loadFile).then(data => {
       const chartResultsData = data['chart']['result'][0];
@@ -160,9 +157,9 @@ class HistoricalPriceChart {
 
     this.margin = { top: 50, right: 50, bottom: 50, left: 20 };
     // this.width = window.innerWidth - this.margin.left - this.margin.right; // Use the window's width
-    this.width = 1200;
+    this.width = 1000;
     // this.height = window.innerHeight - this.margin.top - this.margin.bottom; // Use the window's height
-    this.height = 700;
+    this.height = 500;
 
     // find data range
     const xMin = d3.min(this.currentData, d => d['date']);
