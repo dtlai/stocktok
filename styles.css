@@ -7,7 +7,7 @@
   height: 38px;
   padding: 2px;
   border-radius: 5px;
-  font-size: 12px;
+  font-size: 14px;
   background: rgb(33, 45, 61);
   pointer-events: auto;
 }
@@ -15,7 +15,7 @@
 .tooltip:after {
   box-sizing: border-box;
   display: inline;
-  font-size: 10px;
+  font-size: 14px;
   width: 100%;
   line-height: 0;
   color: rgb(33, 45, 61);
@@ -68,9 +68,12 @@ body {
 #chart {
   background: #57224c;
   color: #b77ec2;
-  max-width: 1300px;
-  height: 700px;
+  max-width: 1500px;
+  height: 600px;
+  /* margin-left: 200px; */
   margin-left: 60px;
+  margin-top: 40px;
+  /* margin-right: auto; */
 }
 
 .info-container {
@@ -112,22 +115,41 @@ body {
   margin-left: 50px;
   margin-right: 50px;
   text-decoration: none;
+  margin-top: 10px;
 }
 
 #about-icon {
   display: flex;
   font-size: 30px;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .about-links > a > p {
   margin-top: 0px;
 }
 
-.info-item {
+.choices-item {
   color: white;
   font-size: 20px;
   display: flex;
+  flex-direction: column;
+  z-index: -1;
+  /* position: absolute;
+  right: 0px;
+  margin-right: 100px;
+  margin-top: 100px; */
+}
+
+.choices-container {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.choose-stock {
+  color: white;
+  font-size: 20px;
+  /* height: 20px; */
 }
 
 #select-stock {
@@ -140,5 +162,13 @@ body {
 }
 
 svg {
-  margin-left: 200px;
+  /* margin-left: auto; */
+  margin-left: 50px;
+  margin-right: auto;
+  /* z-index: -1; */
 }
+
+.item {
+  font-size: 18px;
+}
+

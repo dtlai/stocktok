@@ -12,42 +12,53 @@
       <p>Price Chart (USD) of Vanguard ETFs (VIG, VTI, and VEA) for the year of 2018. 
     </div>
     
-    <div class="info-item">
-      <select id="select-stock">
-        <option selected="selected" value="vig">Vanguard Dividend Appreciation ETF (VIG)</option>
-        <option value="vti">Vanguard Total Stock Market ETF (VTI)</option>
-        <option value="vea">Vanguard FTSE Developed Markets ETF (VEA)</option>
-      </select>
+    <div class="choices-container">
+      <div class="choose-stock">
+        <select id="select-stock">
+          <option selected="selected" value="vig">Vanguard Dividend Appreciation ETF (VIG)</option>
+          <option value="vti">Vanguard Total Stock Market ETF (VTI)</option>
+          <option value="vea">Vanguard FTSE Developed Markets ETF (VEA)</option>
+        </select>
+      </div>
+    
+     
+    </div>
+
+    
+    <div class="graph-container">
+
+      <div class="choices-item" style="min-width:15vw">
+        <div class="item">
+          <input type="checkbox" id="close" checked>
+          <label for="close">Close Price</label>
+        </div>
+        <div class="item">
+          <input type="checkbox" id="moving-average" checked>
+          <label for="moving-average">Moving Average (50 Periods)</label>
+        </div>
+        <div class="item">
+          <input type="checkbox" id="bollinger-bands">
+          <label for="bollinger-bands">Bollinger Bands (20 Periods)</label>
+        </div>
+        <div class="item">
+          <input type="checkbox" id="ohlc">
+          <label for="ohlc">OHLC</label>
+        </div>
+        <div class="item">
+          <input type="checkbox" id="candlesticks">
+          <label for="candlesticks">Candlesticks</label>
+        </div>
+      </div>
+
+      <div id="chart"></div>
+      <script class="graph" src="chart.js"></script>
+      <script>
+        chart = new HistoricalPriceChart();
+      </script>
+
     </div>
     
-    <div class="info-item" style="min-width:15vw">
-      <div class="item">
-        <input type="checkbox" id="close" checked>
-        <label for="close">Close Price</label>
-      </div>
-      <div class="item">
-        <input type="checkbox" id="moving-average" checked>
-        <label for="moving-average">Moving Average (50 Periods)</label>
-      </div>
-      <div class="item">
-        <input type="checkbox" id="bollinger-bands">
-        <label for="bollinger-bands">Bollinger Bands (20 Periods)</label>
-      </div>
-      <div class="item">
-        <input type="checkbox" id="ohlc">
-        <label for="ohlc">OHLC</label>
-      </div>
-      <div class="item">
-        <input type="checkbox" id="candlesticks">
-        <label for="candlesticks">Candlesticks</label>
-      </div>
-    </div>
     
-    <div id="chart"></div>
-    <script class="graph" src="chart.js"></script>
-    <script>
-      chart = new HistoricalPriceChart();
-    </script>
 
     <div class="about-links">
       <a

@@ -793,7 +793,7 @@ class HistoricalPriceChart {
           .on('mouseout', d => {
             dividendTooltip
               .transition()
-              .duration(200)
+              .duration(300)
               .style('opacity', 0);
           });
         // enter and append the square symbols representing the dividends to the group element
