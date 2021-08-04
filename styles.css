@@ -50,7 +50,6 @@
   }
 }
 
-
 a {
   color: white;
   font-size: 20px;
@@ -134,13 +133,16 @@ body {
   display: flex;
   flex-direction: column;
   position: absolute;
-  right: 100px;
+  right: 20px;
   top: 100px;
   z-index: 10
 }
 
 .graph-container {
   position: relative;
+  width: 1450px;
+  height: 650px;
+  margin-left: 60px;
 }
 
 .choices-container {
@@ -152,7 +154,6 @@ body {
 .choose-stock {
   color: white;
   font-size: 20px;
-  /* height: 20px; */
 }
 
 #select-stock {
@@ -165,10 +166,8 @@ body {
 }
 
 svg {
-  /* margin-left: auto; */
-  margin-left: 50px;
+  margin-left: 10px;
   margin-right: auto;
-  /* z-index: -1; */
 }
 
 .item {
