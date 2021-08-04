@@ -93,7 +93,6 @@ class HistoricalPriceChart {
   calculateMovingAverage(data, numberOfPricePoints) {
     return data.map((row, index, total) => {
       const start = Math.max(0, index - numberOfPricePoints);
-      //const end = index + numberOfPricePoints;
       const end = index;
       const subset = total.slice(start, end + 1);
       const sum = subset.reduce((a, b) => {
@@ -156,9 +155,7 @@ class HistoricalPriceChart {
     this.bollingerBandsData = this.calculateBollingerBands(validData, 19);
 
     this.margin = { top: 50, right: 50, bottom: 50, left: 20 };
-    // this.width = window.innerWidth - this.margin.left - this.margin.right; // Use the window's width
     this.width = 1000;
-    // this.height = window.innerHeight - this.margin.top - this.margin.bottom; // Use the window's height
     this.height = 500;
 
     // find data range
@@ -483,8 +480,9 @@ class HistoricalPriceChart {
       this.bollingerBandsData = this.calculateBollingerBands(validData, 19);
 
       this.margin = { top: 50, right: 50, bottom: 50, left: 20 };
-      this.width = window.innerWidth - this.margin.left - this.margin.right; // Use the window's width
-      this.height = window.innerHeight - this.margin.top - this.margin.bottom; // Use the window's height
+
+      this.width = 1000;
+      this.height = 500;
 
       /* update the min, max values, and scales for the axes */
       const xMin = d3.min(this.currentData, d => Math.min(d['date']));
