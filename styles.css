@@ -52,7 +52,7 @@
 
 a {
   color: white;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .about-icon {
@@ -67,14 +67,14 @@ body {
 #chart {
   background: #57224c;
   color: #b77ec2;
-  max-width: 1500px;
-  height: 600px;
+  width: 1210px;
+  height: 500px;
 
   display: flex;
   justify-content: center;
 
-  margin-left: 60px;
-  margin-top: 40px;
+  /* margin-left: 60px; */
+  margin-top: 10px;
   z-index: -1;
 }
 
@@ -99,19 +99,21 @@ body {
 
 .description {
   color: white;
-  font-size: 20px;
+  font-size: 16px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .description > p {
   margin-top: 0px;
+  margin-bottom: 5px;
 }
 
 .about-links {
   display: flex;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 10px;
 }
 
 .about-links > a {
@@ -138,16 +140,16 @@ body {
   display: flex;
   flex-direction: column;
   position: absolute;
-  right: 20px;
-  top: 100px;
+  right: 10px;
+  top: 70px;
   z-index: 10
 }
 
 .graph-container {
   position: relative;
-  width: 1450px;
-  height: 650px;
-  margin-left: 60px;
+  width: 1200px;
+  height: 500px;
+  /* margin-left: 100px; */
 }
 
 .choices-container {
@@ -162,12 +164,12 @@ body {
 }
 
 #select-stock {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .item > input{
-  height: 20px;
-  width: 20px;
+  height: 12px;
+  width: 12px;
 }
 
 svg {
@@ -179,11 +181,11 @@ svg {
 }
 
 .item {
-  font-size: 18px;
+  font-size: 14px;
 }
 
 h1 > img {
-  height: 60px;
+  height: 50px;
 }
 
 .graph {

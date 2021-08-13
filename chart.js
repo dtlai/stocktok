@@ -155,8 +155,8 @@ class HistoricalPriceChart {
     this.bollingerBandsData = this.calculateBollingerBands(validData, 19);
 
     this.margin = { top: 50, right: 50, bottom: 50, left: 20 };
-    this.width = 1000;
-    this.height = 500;
+    this.width = 900;
+    this.height = 400;
 
     // find data range
     const xMin = d3.min(this.currentData, d => d['date']);
@@ -481,8 +481,8 @@ class HistoricalPriceChart {
 
       this.margin = { top: 50, right: 50, bottom: 50, left: 20 };
 
-      this.width = 1000;
-      this.height = 500;
+      this.width = 900;
+      this.height = 400;
 
       /* update the min, max values, and scales for the axes */
       const xMin = d3.min(this.currentData, d => Math.min(d['date']));
