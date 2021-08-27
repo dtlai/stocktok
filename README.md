@@ -1,3 +1,7 @@
+# StockTok
+
+![stocktok_logo](https://i.imgur.com/Ux5P7lc.png)
+
 # Background and Overview 
 Stocktok is a data visualization that displays information about popular ETF stocks. Users are able to switch between different chart types to display the data and utilize common technical indicators to assist in seeing trend patterns.
 
